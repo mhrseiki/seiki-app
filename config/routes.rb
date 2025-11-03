@@ -11,5 +11,10 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
-  root "home#index"
+
+  root "pages#home", as: :seiki_index
+  get "home" => "pages#home", as: :seiki_home
+  get "docs" => "pages#docs", as: :seiki_docs
+  get "community" => "pages#community", as: :seiki_community
+  get "news" => "pages#news", as: :seiki_news
 end
